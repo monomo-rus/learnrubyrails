@@ -1,0 +1,29 @@
+<h1>Tut budet Ball</h1>
+
+<p>
+  <%= link_to 'Добавить фразу', new_answer_path %>
+</p>
+
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+      <th scope="col">Предсказание</th>
+      <th scope="col">Удаление предсказания</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answers.each do |answer| %>
+    <tr>
+  		
+      <td><%= answer.title %></td>
+      <td><%= link_to 'Удалить', answer_path(answer),
+                method: :delete,
+                data: { confirm: 'Точно этот?' } %>
+      </td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
