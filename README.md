@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Мой учебный проект по Ruby-on-Rails. Здесь мои домашние задания, конспекты по решению каких-то проблем/вопросов, 
+и мысли по тем или инным методам решения задач.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.6.0
 
-* System dependencies
+* Rails version 5.2.2.1
 
-* Configuration
+* SQlite3
 
-* Database creation
+------
+Добавлена первая задачка - Магический шар (Magic Ball)
+* Можно добавлять фразы
 
-* Database initialization
+* Админ может управлять списком фраз
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Графическое отоброжение процесса игры
