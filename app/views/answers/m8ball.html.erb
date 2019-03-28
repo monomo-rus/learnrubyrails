@@ -1,5 +1,18 @@
-<% @m8ball.each do |rnd| %>
-<span>
-	<%= rnd.title %>
-</span>
-<% end %>
+<h1 class="text-center">Загадай свой вопрос и нажми "Предсказать"</h1>
+<h3 class="text-center">
+	<span>Шар даст ответ! Надеюсь тебе повезет :)</span><br>
+	<%= link_to "Добавить свой ответ", new_answer_path, class: "btn btn-success btn-sm" %>
+</h3>
+<div class="game-ball">
+
+	<%= link_to "Предсказать", "/game/m8ball", class: "btn btn-primary" %>
+
+	<% @m8ball.each do |rnd| %>
+		<span class="preds"><%= rnd.title %></span>
+	<% end %>
+
+</div>
+
+<script>
+	setTimeout(function(){ $('.preds').hide(); }, 7000);
+</script>
