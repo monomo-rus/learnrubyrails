@@ -10,6 +10,27 @@
   </head>
 
   <body>
+    <header class="container-justify">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">
+            <%= image_tag "emapi-logo.png", class: "logo" %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Игры</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Задачи</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Упражнения</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Мысли</a>
+        </li>
+      </ul>
+    </header>
     <div class="container">
       <%= yield %>
     </div>

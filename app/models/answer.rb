@@ -1,5 +1,8 @@
 class Answer < ApplicationRecord
-	validates :title, presence: true
-end
 
-# Answer.create(title: !nil).valid?
+	# Валидация примерно на такой запрос Answer.create(title: !nil).valid?
+
+	validates :title, presence: true
+
+	
+end

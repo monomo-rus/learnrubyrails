@@ -1,18 +1,13 @@
 class AnswersController < ApplicationController
 
+  http_basic_authenticate_with name: "adminm8b", password: "<JHOX", except: [:new, :m8ball]
+
   def index
   	@answers = Answer.all
-  end
-
-  def show
-  	# @answer = Answer.find(params[:id])
   end
  
   def new
   	@answer = Answer.new
-  end
-
-  def edit
   end
 
   def create
@@ -29,9 +24,6 @@ class AnswersController < ApplicationController
 
   end
 
-  def update
-  end
-
   def destroy
   	@answer = Answer.find(params[:id])
     @answer.destroy
@@ -40,10 +32,16 @@ class AnswersController < ApplicationController
   end
 
 
+  def m8ball
+
+    @m8ball = Answer.order_by_rand.limit(1).all
+
+  end
+
+
   private
     def answer_params
       params.require(:answer).permit(:title)
     end
-
 
 end

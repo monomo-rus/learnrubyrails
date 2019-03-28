@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'answers#index'
+  root 'game#index'
 
   
-  resources :answers
+  resources :answers, only: [:index, :new, :create, :destroy, :m8ball]
+
+
+  get 'game(/m8ball)', to: 'answers#m8ball'
 
 
 
