@@ -1,6 +1,6 @@
 class AnswersController < ApplicationController
 
-  http_basic_authenticate_with name: "adminm8b", password: "<JHOX", except: [:new, :m8ball]
+  http_basic_authenticate_with name: "admin", password: "123", except: [:new, :m8ball]
 
   def index
   	@answers = Answer.all
